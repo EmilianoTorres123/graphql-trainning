@@ -1,13 +1,14 @@
 build:
-  adsoftsito:
-    image: okteto.dev/graphql-adsoftsito:latest
+ emilianotorres123:  # cambiar por su namespace de okteto
+   image: okteto.dev/emilianotorres123:latest  # cambiar por su namespace de okteto
 
 deploy:
-  - okteto build # build the image with the latest code
-  - kubectl apply -f manifests # create all the resources in kubernetes
+ - okteto build # build the image with the latest code
+ - kubectl apply -f manifests # create all the resources in kubernetes
 dev:
-  adsoftsito:
-    command: bash
-    sync:
-    - .:/hackernews
+ emilianotorres123:
+   command: bash
+   sync:
+   - .:/graphql-trainning  # cambiar por su proyecto
+
     
